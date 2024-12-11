@@ -1,1 +1,2 @@
-/experiments/CIFAR10/
+./experiments/CIFAR10/*
+
