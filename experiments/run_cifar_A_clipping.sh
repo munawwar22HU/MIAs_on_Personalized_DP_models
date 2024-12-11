@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=dp_sgd_cifar_A_clipping      # Job name
-#SBATCH --output=dp_sgd_cifar_A_clipping.out     # Output file
-#SBATCH --error=dp_sgd_cifar_A_clipping.err      # Error file
+#SBATCH --job-name=cifar_A_clip      # Job name
+#SBATCH --output=cifar_A_clip.out     # Output file
+#SBATCH --error=cifar_A_cli.err      # Error file
 #SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
 #SBATCH --cpus-per-task=8              # Number of CPU cores per task
 #SBATCH --gres=gpu:1                   # Request 1 GPU
@@ -52,4 +52,5 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --mia_count 0 \
     --mia_ndata $mia_ndata \
     --noise_multiplier $noise_multiplier
+
 

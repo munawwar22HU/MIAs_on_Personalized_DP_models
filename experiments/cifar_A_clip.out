@@ -1,0 +1,6 @@
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to CIFAR10/cifar-10-python.tar.gz
+Extracting CIFAR10/cifar-10-python.tar.gz to CIFAR10
+Files already downloaded and verified
+len of train_set:  50000
+len of test_set:  10000
+Files already downloaded and verified
