@@ -1,0 +1,6 @@
+./scripts/CIFAR10
+./scripts/MNIST
+./scripts/SVHN
+./experiments/CIFAR10
+./experiments/MNIST
+./experiments/SVHN
