@@ -1,0 +1,3 @@
+len of train_set:  60000
+len of test_set:  10000
+save path accuracy:  ../mnist_results/clipping/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0/accuracy.log

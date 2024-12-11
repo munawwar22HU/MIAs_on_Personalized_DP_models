@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=dp_sgd_mnist_2      # Job name
-#SBATCH --output=dp_sgd_mnist_2.out     # Output file
-#SBATCH --error=dp_sgd_mnist_2.err      # Error file
+#SBATCH --job-name=mnist_A_sample      # Job name
+#SBATCH --output=mnist_A_sample.out     # Output file
+#SBATCH --error=mnist_A_sample.err      # Error file
 #SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
 #SBATCH --cpus-per-task=8              # Number of CPU cores per task
 #SBATCH --gres=gpu:1                   # Request 1 GPU
-#SBATCH --mem=4G                      # Memory allocation
+#SBATCH --mem=16G                      # Memory allocation
 #SBATCH --time=2:00:00                # Maximum runtime (12 hours)
 
 
@@ -30,7 +30,7 @@ export max_grad_norm=0.2
 # Noise Multiplier
 export noise_multiplier=3.42529
 # Number of data points for MIA
-export mia_ndata=50000
+export mia_ndata=60000
 # Mode
 export mode="mia"
 # Save Directory
@@ -51,5 +51,5 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --mode $mode \
     --mia_count 0 \
     --mia_ndata $mia_ndata \
-    --noise_multiplier $noise_multiplier
-
+    --noise_multiplier $noise_multiplier \
+   --max_physical_batch_size 1024

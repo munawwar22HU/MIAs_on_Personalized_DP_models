@@ -1,0 +1,35 @@
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz to MNIST/raw/train-images-idx3-ubyte.gz
+Extracting MNIST/raw/train-images-idx3-ubyte.gz to MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz to MNIST/raw/train-labels-idx1-ubyte.gz
+Extracting MNIST/raw/train-labels-idx1-ubyte.gz to MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz to MNIST/raw/t10k-images-idx3-ubyte.gz
+Extracting MNIST/raw/t10k-images-idx3-ubyte.gz to MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz to MNIST/raw/t10k-labels-idx1-ubyte.gz
+Extracting MNIST/raw/t10k-labels-idx1-ubyte.gz to MNIST/raw
+
+len of train_set:  60000
+len of test_set:  10000
+save path accuracy:  ../mnist_results/clipping/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_2.0_3.0_ratios_0.34_0.43_0.23_seeds_0/accuracy.log
