@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=dp_sgd_cifar_1      # Job name
-#SBATCH --output=dp_sgd_cifar_1.out     # Output file
-#SBATCH --error=dp_sgd_cifar_1.err      # Error file
+#SBATCH --job-name=cifar_A_sample      # Job name
+#SBATCH --output=cifar_A_sample.out     # Output file
+#SBATCH --error=cifar_A_sample.err      # Error file
 #SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
 #SBATCH --cpus-per-task=8              # Number of CPU cores per task
 #SBATCH --gres=gpu:1                   # Request 1 GPU
-#SBATCH --mem=4G                      # Memory allocation
+#SBATCH --mem=16G                      # Memory allocation
 #SBATCH --time=2:00:00                # Maximum runtime (12 hours)
 
 
