@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=dp_sgd_SHVN_B_sampling      # Job name
-#SBATCH --output=dp_sgd_SHVN_B_sampling.out     # Output file
-#SBATCH --error=dp_sgd_SHVN_B_sampling.err      # Error file
+#SBATCH --job-name=svhn_B_sample      # Job name
+#SBATCH --output=svhn_B_sample.out     # Output file
+#SBATCH --error=svhn_B_sample.err      # Error file
 #SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
 #SBATCH --cpus-per-task=8              # Number of CPU cores per task
 #SBATCH --gres=gpu:1                   # Request 1 GPU
@@ -12,7 +12,7 @@
 # DATASET
 export dname="SVHN"
 # Architecture
-export architecture="VGG11"
+export architecture="CIFAR10_CNN"
 # Individualize
 export individualize="sampling"
 # Privacy Budgets
@@ -28,12 +28,10 @@ export epochs=50
 # Max Grad Norm
 export max_grad_norm=0.6
 # Noise Multiplier
-export noise_multiplier=1.667
-# Weights
-export weights="0.008 0.015 0.021"
+export noise_multiplier=2.41421
 
 # Number of data points for MIA
-export mia_ndata=25000
+export mia_ndata=73257
 # Mode
 export mode="mia"
 # Save Directory
@@ -55,6 +53,6 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --mode $mode \
     --mia_count 0 \
     --mia_ndata $mia_ndata \
-    --weights $weights \
-    --assign_budget "even" 
+    --max_physical_batch_size 1024 
+    
 

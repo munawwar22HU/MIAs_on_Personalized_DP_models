@@ -1,0 +1,6 @@
+Using downloaded and verified file: SVHN/train_32x32.mat
+Using downloaded and verified file: SVHN/test_32x32.mat
+len of train_set:  73257
+len of test_set:  26032
+Using downloaded and verified file: SVHN/train_32x32.mat
+save path accuracy:  ../svhn_results/standard/SVHN/epochs_30_batch_1024_lr_0.2_max_grad_norm_0.9_budgets_1.0_2.0_3.0_ratios_0.34_0.43_0.23_seeds_0/accuracy.log
