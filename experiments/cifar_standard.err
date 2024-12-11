@@ -1,0 +1,20 @@
+Input args: Namespace(dname='CIFAR10', seeds=[0], architecture='CIFAR10_CNN', accountant='rdp', individualize=None, log_iteration=100, lr=0.7, momentum=0.5, epochs=30, n_workers=6, batch_size=1024, max_physical_batch_size=128, delta=1e-05, budgets=[1.0, 2.0, 3.0], ratios=[0.54, 0.37, 0.09], max_grad_norm=0.4, noise_multiplier=3.29346, weights=None, adapt_weights_to_budgets=True, use_cuda='True', save_path='../cifar_results/standard/CIFAR10/epochs_30_batch_1024_lr_0.7_max_grad_norm_0.4_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0', mode='mia', accuracy_log='accuracy.log', assign_budget='even', class_budgets=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], mia_ndata=25000, mia_count=1, allow_excess=False, save_model='True')
+seed: 0,   max_iteration: 1465,   1 epoch ~= 49 iterations
+seed: 0,   max_iteration: 732,   1 epoch ~= 24 iterations
+/local/scratch/manwa22/idp-sgd/experiments/../opacus/opacus/privacy_engine.py:126: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/local/scratch/manwa22/idp-sgd/experiments/../opacus/opacus/accountants/analysis/rdp.py:74: RuntimeWarning: invalid value encountered in scalar subtract
+  return math.log1p(math.exp(a - b)) + b  # log1p(x) = log(x + 1)
+Initializing privacy parameters:   max_grad_norm=0.4,   sample_rate=0.04,   noise_multiplier 4.5556640625,   no individual parameters
+/local/scratch/manwa22/miniconda3/envs/idp/lib/python3.9/site-packages/torch/nn/modules/module.py:1373: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+iteration: 0,   train accuracy: 10.38,   test accuracy: 10.15,   loss: 2.2984,   DP costs: 0.051,   average batch-size: 932,   best alpha: 131.56,   time: 1
+iteration: 100,   train accuracy: 32.42,   test accuracy: 33.19,   loss: 1.94311,   DP costs: 0.347,   average batch-size: 1002,   best alpha: 41.53,   time: 30
+iteration: 200,   train accuracy: 40.56,   test accuracy: 41.05,   loss: 1.44598,   DP costs: 0.497,   average batch-size: 1003,   best alpha: 30.99,   time: 59
+iteration: 300,   train accuracy: 43.81,   test accuracy: 43.45,   loss: 1.79663,   DP costs: 0.615,   average batch-size: 992,   best alpha: 26.12,   time: 87
+iteration: 400,   train accuracy: 46.81,   test accuracy: 45.91,   loss: 1.60211,   DP costs: 0.716,   average batch-size: 1010,   best alpha: 23.01,   time: 116
+iteration: 500,   train accuracy: 47.02,   test accuracy: 45.36,   loss: 1.61769,   DP costs: 0.806,   average batch-size: 996,   best alpha: 20.94,   time: 144
+iteration: 600,   train accuracy: 48.26,   test accuracy: 46.92,   loss: 1.71697,   DP costs: 0.888,   average batch-size: 998,   best alpha: 19.36,   time: 172
+iteration: 700,   train accuracy: 47.22,   test accuracy: 46.54,   loss: 1.47835,   DP costs: 0.964,   average batch-size: 1008,   best alpha: 18.05,   time: 201
+iteration: 750,   train accuracy: 48.54,   test accuracy: 47.05,   loss: 1.64432,   DP costs: 1.001,   average batch-size: 1007,   best alpha: 17.56,   time: 215
+Terminate: The budgets of groups [0] are exhausted!

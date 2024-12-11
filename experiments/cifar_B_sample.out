@@ -3,3 +3,4 @@ Files already downloaded and verified
 len of train_set:  50000
 len of test_set:  10000
 Files already downloaded and verified
+save path accuracy:  ../cifar_results/sampling/CIFAR10/epochs_60_batch_1024_lr_0.1_max_grad_norm_1.8_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0/accuracy.log
