@@ -385,6 +385,7 @@ def get_mia_train_set_ppbudgets(dataset_name: str, epochs: int, n_workers: int,
     indices = np.arange(n_data, dtype=int)
     np.random.seed(seed=args.mia_count)
     idx = np.random.choice(a=indices, size=args.mia_ndata, replace=False)
+    print("idx: ", idx,args.mia_ndata)
     np.random.seed(seed=args.seed)
 
     # Main part: re-map ppbudgets, data items, and labels for mia.
@@ -392,10 +393,16 @@ def get_mia_train_set_ppbudgets(dataset_name: str, epochs: int, n_workers: int,
     train_set.data = train_set.data[idx]
     train_set.targets = np.array(train_set.targets)[idx]
 
+    print("len ", len(idx))
+    print("len of train_set: ", len(train_set))
+    print("len of train_set.targets: ", len(train_set.targets))
+    print("len of pp_budgets: ", len(pp_budgets))
+
     save_file = os.path.join(save_path_idx, 'assignment.npy')
     save_pp_budgets = os.path.join(save_path_idx, 'pp_budgets.npy')
     np.save(file=save_file, arr=idx)
     np.save(file=save_pp_budgets, arr=pp_budgets)
+    print("length",pp_budgets.shape)
 
     
    

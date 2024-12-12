@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/local/scratch/manwa22/idp-sgd/experiments/../mia/mia_per_group.py", line 289, in <module>
+    main(args=args)
+  File "/local/scratch/manwa22/idp-sgd/experiments/../mia/mia_per_group.py", line 237, in main
+    test_sample_logits = test_target_class_logits[test_sample]
+IndexError: index 2080 is out of bounds for axis 0 with size 1

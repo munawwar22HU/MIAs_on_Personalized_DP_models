@@ -8,8 +8,8 @@
 #SBATCH --mem=1G                      # Memory allocation
 #SBATCH --time=2:00:00                # Maximum runtime (12 hours)
 
-export base_folder="../svhn_results/standard/SVHN/epochs_30_batch_1024_lr_0.2_max_grad_norm_0.9_budgets_1.0_2.0_3.0_ratios_0.34_0.43_0.23_seeds_0"
-export dname="SVHN"
+export base_folder="../cifar_results/standard/CIFAR10/epochs_30_batch_1024_lr_0.7_max_grad_norm_0.4_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
+export dname="CIFAR10"
 export individualize=None
 export num_shadow_models=1
 export target_model_name="run0"

@@ -1,4 +1,4 @@
-Wed Dec 11 19:59:30 2024       
+Thu Dec 12 11:46:13 2024       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
 |-----------------------------------------+------------------------+----------------------+
@@ -18,34 +18,34 @@ Wed Dec 11 19:59:30 2024
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
-non_target_logits shape:  (1, 26032, 10)
-target_logits shape:  (1, 73257, 10)
-pp_budgets shape:  (73257,)
-assignment shape:  (73257,)
-Using downloaded and verified file: SVHN/train_32x32.mat
-Using downloaded and verified file: SVHN/test_32x32.mat
-len of train_set:  73257
-len of test_set:  26032
-train_labels shape:  (73257,)
-test_labels shape:  (26032,)
-train_labels shape:  (73257,)
-test_labels shape:  (26032,)
-tr_target_logits shape:  (1, 73257, 10)
-tr_train_labels shape:  (73257,)
-train_target_class_logits shape:  (1, 73257, 1) [[[12.792832 ]
-  [ 8.636205 ]
-  [ 8.295079 ]
+non_target_logits shape:  (1, 10000, 10)
+target_logits shape:  (1, 60000, 10)
+pp_budgets shape:  (60000,)
+assignment shape:  (60000,)
+len of train_set:  60000
+len of test_set:  10000
+train_labels shape:  (60000,)
+test_labels shape:  (10000,)
+train_labels shape:  (60000,)
+test_labels shape:  (10000,)
+pp_budgets shape:  (60000,)
+tr_target_logits shape:  (1, 60000, 10)
+tr_train_labels shape:  (60000,)
+train_target_class_logits shape:  (1, 60000, 1) [[[14.635253 ]
+  [13.692227 ]
+  [10.813507 ]
   ...
-  [ 9.055914 ]
-  [10.462832 ]
-  [11.7328615]]]
-test_target_class_logits shape:  (1, 26032, 1) [[[10.253361 ]
-  [13.412197 ]
-  [ 8.488003 ]
+  [14.7857485]
+  [13.662742 ]
+  [12.684338 ]]]
+test_target_class_logits shape:  (1, 10000, 1) [[[16.183256]
+  [12.738384]
+  [14.675687]
   ...
-  [ 6.7289724]
-  [ 5.6598825]
-  [12.640748 ]]]
-group_1_logits shape:  (24419, 1)
-group_2_logits shape:  (24419, 1)
-group_3_logits shape:  (24419, 1)
+  [14.16465 ]
+  [13.850244]
+  [14.018266]]]
+group_1_logits shape:  (20000, 1)
+group_2_logits shape:  (20000, 1)
+group_3_logits shape:  (20000, 1)
+ROC curve saved at ../mnist_results/standard/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0/roc_curve_per_privacy_group.pdf

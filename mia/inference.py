@@ -69,7 +69,7 @@ def rename_checkpoint_keys(checkpoint):
 def load_model(args, model_path, cuda: bool = True):
     if args.dname == 'MNIST':
         model = MNIST_CNN()
-    elif args.dname == 'CIFAR10':
+    elif args.dname == 'CIFAR10' or args.dname == 'SVHN':
         model = CIFAR10_CNN()
     else:
         raise ValueError(f"No such dataset: {args.dname}")
@@ -110,10 +110,11 @@ def inference(args, loader: DataLoader, cuda: bool = True) -> np.ndarray[float]:
         with torch.no_grad():
             end = 0
             for v in loader:
-                if args.individualize == 'sampling':
-                    data, target = v
-                elif args.individual == 'clipping':
-                    data, target, _ = v
+                if args.dname=="CIFAR10" or args.dname=="MNIST" or args.dname=="SVHN":
+                    data = v[0]
+                    target = v[1]
+                # elif args.individualize == 'clipping':
+                #     data, target, _ = v
                 batch_size = data.shape[0]
                 if cuda:
                     data, target = data.cuda(), target.cuda()
@@ -134,7 +135,7 @@ def inference(args, loader: DataLoader, cuda: bool = True) -> np.ndarray[float]:
 
 def main(args):
     print(f"Running MIA on {args.basefolder}")
-    if args.dname in ['MNIST', 'SVHM', 'CIFAR10']:
+    if args.dname in ['MNIST', 'SVHN', 'CIFAR10']:
         args.num_classes = 10
     else:
         raise ValueError(f"No such dataset: {args.dname}")
@@ -151,17 +152,6 @@ def main(args):
     test_result_logits_arr = inference(args, loader=test_loader)
     print("Train Loader",len(train_loader.dataset))
     print("Test Loader",len(test_loader.dataset))
-    labels = []
-    for _, label in train_loader:
-        labels.extend(list(label.cpu().numpy()))
-    train_labels = np.array(labels)
-    np.save(arr=train_labels, file=os.path.join(args.basefolder, 'train_labels.npy'))
-    test_labels = []
-    for _, label in test_loader:
-        test_labels.extend(list(label.cpu().numpy())
-        )
-    test_labels = np.array(test_labels)
-    np.save(arr=test_labels, file=os.path.join(args.basefolder, 'test_labels.npy'))
     if args.target_model_name != 'None':
         logits_name = 'target_logits.npy'
         

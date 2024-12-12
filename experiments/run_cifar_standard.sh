@@ -26,7 +26,7 @@ export max_grad_norm=0.4
 # Noise Multiplier
 export noise_multiplier=3.29346
 # Number of data points for MIA
-export mistandarda=50000
+export mia_ndata=50000
 # Mode
 export mode="mia"
 # Save Directory
@@ -43,6 +43,7 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --batch_size $batch_size \
     --max_grad_norm ${max_grad_norm} \
     --mode $mode \
-    --noise_multiplier $noise_multiplier
+    --noise_multiplier $noise_multiplier\
+    --mia_ndata $mia_ndata \
 
 

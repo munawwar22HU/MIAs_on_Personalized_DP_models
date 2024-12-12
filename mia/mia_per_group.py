@@ -195,6 +195,8 @@ def main(args):
     print("train_labels shape: ", train_labels.shape)
     print("test_labels shape: ", test_labels.shape)
 
+    print("pp_budgets shape: ", pp_budgets.shape)
+
 
     # Get the indices of the groups
     group_1 = np.where(pp_budgets == 1)[0]
@@ -229,17 +231,21 @@ def main(args):
     group_2_sample = np.random.choice(group_2_logits.shape[0], size=10000, replace=False)
     group_3_sample = np.random.choice(group_3_logits.shape[0], size=10000, replace=False)
 
+    test_sample = np.random.choice(test_target_class_logits.shape[1], size=10000, replace=False)
+    
     group_1_sample_logits = group_1_logits[group_1_sample]
     group_2_sample_logits = group_2_logits[group_2_sample]
     group_3_sample_logits = group_3_logits[group_3_sample]
+    test_sample_logits = test_target_class_logits[0][test_sample]
+   
 
     y_member = np.zeros(10000)
     y_non_member = np.ones(10000)
     y_true = np.concatenate((y_member, y_non_member))
 
-    likelihood_scores_1 = np.concatenate((group_1_sample_logits.flatten(), test_target_class_logits.flatten()))
-    likelihood_scores_2 = np.concatenate((group_2_sample_logits.flatten(), test_target_class_logits.flatten()))
-    likelihood_scores_3 = np.concatenate((group_3_sample_logits.flatten(), test_target_class_logits.flatten()))
+    likelihood_scores_1 = np.concatenate((group_1_sample_logits.flatten(), test_sample_logits.flatten()))
+    likelihood_scores_2 = np.concatenate((group_2_sample_logits.flatten(), test_sample_logits.flatten()))
+    likelihood_scores_3 = np.concatenate((group_3_sample_logits.flatten(), test_sample_logits.flatten()))
     
     # group_1_logits = target_logits[0][group_1]
     # group_2_logits = target_logits[0][group_2]
@@ -274,7 +280,10 @@ def main(args):
     plt.ylabel("True Positive Rate")
     plt.xlabel("False Positive Rate")
     plt.legend()
-    plt.savefig(f"roc_curve_per_privacy_group.pdf")
+    plt.show()
+    save_path = os.path.join(args.basefolder, f"roc_curve_per_privacy_group.pdf")
+    plt.savefig(save_path)
+    print(f"ROC curve saved at {save_path}")
 
     
 if __name__ == "__main__":

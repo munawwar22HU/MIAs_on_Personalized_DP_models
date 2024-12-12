@@ -1,3 +1,5 @@
 experiments/CIFAR10
-experiments/CIFAR100
+experiments/MNIST
+experiments/SVHN
+
 
