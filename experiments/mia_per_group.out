@@ -1,0 +1,51 @@
+Wed Dec 11 19:59:30 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    Off |   00000000:18:00.0 Off |                    0 |
+| N/A   24C    P0             77W /  700W |       1MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+non_target_logits shape:  (1, 26032, 10)
+target_logits shape:  (1, 73257, 10)
+pp_budgets shape:  (73257,)
+assignment shape:  (73257,)
+Using downloaded and verified file: SVHN/train_32x32.mat
+Using downloaded and verified file: SVHN/test_32x32.mat
+len of train_set:  73257
+len of test_set:  26032
+train_labels shape:  (73257,)
+test_labels shape:  (26032,)
+train_labels shape:  (73257,)
+test_labels shape:  (26032,)
+tr_target_logits shape:  (1, 73257, 10)
+tr_train_labels shape:  (73257,)
+train_target_class_logits shape:  (1, 73257, 1) [[[12.792832 ]
+  [ 8.636205 ]
+  [ 8.295079 ]
+  ...
+  [ 9.055914 ]
+  [10.462832 ]
+  [11.7328615]]]
+test_target_class_logits shape:  (1, 26032, 1) [[[10.253361 ]
+  [13.412197 ]
+  [ 8.488003 ]
+  ...
+  [ 6.7289724]
+  [ 5.6598825]
+  [12.640748 ]]]
+group_1_logits shape:  (24419, 1)
+group_2_logits shape:  (24419, 1)
+group_3_logits shape:  (24419, 1)
