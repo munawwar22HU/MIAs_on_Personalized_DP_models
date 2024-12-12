@@ -15,7 +15,7 @@ conda env create -f environment.yml
 which will create a conda environment named `idp` with all the required libraries.
 
 # Experiments
-We conducted a total of 18 experiments, 6 for each dataset (CIFAR-10, CIFAR-100, and SVHN). For each dataset, we trained models with three different privacy budgets (0.1, 0.5, and 1.0) and two ratios of the individualized privacy budgets (0.54,0.37,0.09) and
+We conducted a total of 18 experiments, 6 for each dataset (CIFAR-10, CIFAR-100, and SVHN). For each dataset, we trained models with three different privacy budgets (1.0, 2.0, and 3.0) and two ratios of the individualized privacy budgets (0.54,0.37,0.09) and
 (0.34,0.43,0.23)
 
 # Code Structure
