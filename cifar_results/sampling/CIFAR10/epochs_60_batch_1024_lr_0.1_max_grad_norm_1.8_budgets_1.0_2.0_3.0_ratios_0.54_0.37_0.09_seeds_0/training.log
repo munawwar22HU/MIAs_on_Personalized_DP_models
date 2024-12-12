@@ -31,3 +31,6 @@ INFO:root:iteration: 2500,   train accuracy: 56.52,   test accuracy: 56.38,   lo
 INFO:root:iteration: 2600,   train accuracy: 57.3,   test accuracy: 56.58,   loss: 1.29937,   DP costs: [0.936, 1.869, 2.8],   average batch-size: 1018,   best alpha: [18.49, 10.59, 7.77],   time: 730
 INFO:root:iteration: 2700,   train accuracy: 58.08,   test accuracy: 57.28,   loss: 1.37446,   DP costs: [0.955, 1.908, 2.859],   average batch-size: 1016,   best alpha: [18.21, 10.44, 7.66],   time: 761
 INFO:root:iteration: 2800,   train accuracy: 57.76,   test accuracy: 57.22,   loss: 1.38876,   DP costs: [0.974, 1.946, 2.917],   average batch-size: 1017,   best alpha: [17.93, 10.28, 7.55],   time: 792
+INFO:root:iteration: 2900,   train accuracy: 58.41,   test accuracy: 57.48,   loss: 1.3874,   DP costs: [0.992, 1.983, 2.974],   average batch-size: 1006,   best alpha: [17.65, 10.13, 7.45],   time: 823
+INFO:root:iteration: 2929,   train accuracy: 58.77,   test accuracy: 57.63,   loss: 1.38992,   DP costs: [0.997, 1.994, 2.99],   average batch-size: 1010,   best alpha: [17.58, 10.09, 7.42],   time: 834
+INFO:root:Terminate: The maximum of iterations is reached!
