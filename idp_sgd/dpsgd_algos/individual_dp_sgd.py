@@ -40,7 +40,7 @@ save_path = '/mfsnic/projects/idpsgd/'
 mode = 'mia'  # debug run mia
 dataset = 'MNIST'
 individualize = 'clipping'
-assign_budget = 'even'
+assign_budget = 'random'
 architecture = 'MNIST_CNN'
 
 if mode in ['run', 'mia']:

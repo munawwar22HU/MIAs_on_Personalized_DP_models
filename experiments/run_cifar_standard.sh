@@ -32,6 +32,7 @@ export mode="mia"
 # Save Directory
 export save_dir="../cifar_results/"
 
+export ratios="0.43 0.34 0.23"
 # Run the script
 python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --save_path $save_dir \
@@ -44,6 +45,8 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --max_grad_norm ${max_grad_norm} \
     --mode $mode \
     --noise_multiplier $noise_multiplier\
+    --ratios $ratios \
+    --max_physical_batch_size 512 \
     --mia_ndata $mia_ndata \
 
 

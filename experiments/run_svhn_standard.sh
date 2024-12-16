@@ -20,7 +20,7 @@ export individualize=None
 # Privacy Budgets
 export budgets="1.0 2.0 3.0"
 # Ratios
-export ratios="0.34 0.43 0.23"
+export ratios="0.54 0.37 0.09"
 # Learning Rate
 export lr=0.2
 # Batch Size

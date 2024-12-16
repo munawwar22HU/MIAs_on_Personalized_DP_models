@@ -188,6 +188,7 @@ def compute_likelihood(args):
 
 
 def main(args):
+    NUM_POINTS = 6_500
     non_target_logits, target_logits=load_logit_scores(args=args)
     pp_budgets=load_pp_budgets(args=args)
     assignment=load_assignments_target(args=args)
@@ -227,11 +228,11 @@ def main(args):
     print("group_2_logits shape: ", group_2_logits.shape)
     print("group_3_logits shape: ", group_3_logits.shape)
 
-    group_1_sample = np.random.choice(group_1_logits.shape[0], size=10000, replace=False)
-    group_2_sample = np.random.choice(group_2_logits.shape[0], size=10000, replace=False)
-    group_3_sample = np.random.choice(group_3_logits.shape[0], size=10000, replace=False)
+    group_1_sample = np.random.choice(group_1_logits.shape[0], size=NUM_POINTS, replace=False)
+    group_2_sample = np.random.choice(group_2_logits.shape[0], size=NUM_POINTS, replace=False)
+    group_3_sample = np.random.choice(group_3_logits.shape[0], size=NUM_POINTS, replace=False)
 
-    test_sample = np.random.choice(test_target_class_logits.shape[1], size=10000, replace=False)
+    test_sample = np.random.choice(test_target_class_logits.shape[1], size=NUM_POINTS, replace=False)
     
     group_1_sample_logits = group_1_logits[group_1_sample]
     group_2_sample_logits = group_2_logits[group_2_sample]
@@ -239,8 +240,8 @@ def main(args):
     test_sample_logits = test_target_class_logits[0][test_sample]
    
 
-    y_member = np.zeros(10000)
-    y_non_member = np.ones(10000)
+    y_member = np.zeros(NUM_POINTS)
+    y_non_member = np.ones(NUM_POINTS)
     y_true = np.concatenate((y_member, y_non_member))
 
     likelihood_scores_1 = np.concatenate((group_1_sample_logits.flatten(), test_sample_logits.flatten()))

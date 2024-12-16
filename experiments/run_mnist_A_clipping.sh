@@ -1,12 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=mnist_A_clip      # Job name
-#SBATCH --output=mnist_A_clip.out     # Output file
-#SBATCH --error=mnist_A_clip.err      # Error file
-#SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
-#SBATCH --cpus-per-task=8              # Number of CPU cores per task
-#SBATCH --gres=gpu:1                   # Request 1 GPU
-#SBATCH --mem=16G                      # Memory allocation
-#SBATCH --time=2:00:00                # Maximum runtime (12 hours)
+
 
 
 # DATASET

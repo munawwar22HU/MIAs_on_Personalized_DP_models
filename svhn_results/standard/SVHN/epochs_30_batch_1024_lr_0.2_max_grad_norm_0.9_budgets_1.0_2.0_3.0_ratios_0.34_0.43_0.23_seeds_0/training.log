@@ -1,0 +1,28 @@
+INFO:root:Input args: Namespace(dname='SVHN', seeds=[0], architecture='CIFAR10_CNN', accountant='rdp', individualize=None, log_iteration=100, lr=0.2, momentum=0.5, epochs=30, n_workers=6, batch_size=1024, max_physical_batch_size=1024, delta=1e-05, budgets=[1.0, 2.0, 3.0], ratios=[0.34, 0.43, 0.23], max_grad_norm=0.9, noise_multiplier=2.74658, weights=None, adapt_weights_to_budgets=True, use_cuda='True', save_path='../svhn_results/standard/SVHN/epochs_30_batch_1024_lr_0.2_max_grad_norm_0.9_budgets_1.0_2.0_3.0_ratios_0.34_0.43_0.23_seeds_0', mode='mia', accuracy_log='accuracy.log', assign_budget='random', class_budgets=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], mia_ndata=73257, mia_count=0, allow_excess=False, save_model='True')
+INFO:root:seed: 0,   max_iteration: 2146,   1 epoch ~= 72 iterations
+INFO:root:seed: 0,   max_iteration: 2146,   1 epoch ~= 72 iterations
+INFO:root:Initializing privacy parameters:   max_grad_norm=0.9,   sample_rate=0.013888888888888888,   noise_multiplier 2.74658203125,   no individual parameters
+INFO:root:iteration: 0,   train accuracy: 11.29,   test accuracy: 10.2,   loss: 2.30076,   DP costs: 0.102,   average batch-size: 923,   best alpha: 64.51,   time: 1
+INFO:root:iteration: 100,   train accuracy: 18.93,   test accuracy: 19.59,   loss: 2.22077,   DP costs: 0.203,   average batch-size: 1035,   best alpha: 62.7,   time: 30
+INFO:root:iteration: 200,   train accuracy: 18.87,   test accuracy: 19.59,   loss: 2.23498,   DP costs: 0.288,   average batch-size: 928,   best alpha: 48.39,   time: 57
+INFO:root:iteration: 300,   train accuracy: 19.08,   test accuracy: 19.59,   loss: 2.22889,   DP costs: 0.354,   average batch-size: 1132,   best alpha: 40.85,   time: 88
+INFO:root:iteration: 400,   train accuracy: 18.93,   test accuracy: 19.59,   loss: 2.25235,   DP costs: 0.411,   average batch-size: 1003,   best alpha: 36.22,   time: 116
+INFO:root:iteration: 500,   train accuracy: 18.88,   test accuracy: 19.59,   loss: 2.21668,   DP costs: 0.461,   average batch-size: 981,   best alpha: 32.9,   time: 144
+INFO:root:iteration: 600,   train accuracy: 18.86,   test accuracy: 19.59,   loss: 2.24866,   DP costs: 0.507,   average batch-size: 1031,   best alpha: 30.49,   time: 173
+INFO:root:iteration: 700,   train accuracy: 18.85,   test accuracy: 19.59,   loss: 2.25001,   DP costs: 0.55,   average batch-size: 1019,   best alpha: 28.5,   time: 201
+INFO:root:iteration: 800,   train accuracy: 18.65,   test accuracy: 19.59,   loss: 2.24053,   DP costs: 0.59,   average batch-size: 1030,   best alpha: 26.95,   time: 230
+INFO:root:iteration: 900,   train accuracy: 18.95,   test accuracy: 19.59,   loss: 2.2407,   DP costs: 0.628,   average batch-size: 986,   best alpha: 25.6,   time: 258
+INFO:root:iteration: 1000,   train accuracy: 18.88,   test accuracy: 19.59,   loss: 2.24929,   DP costs: 0.664,   average batch-size: 969,   best alpha: 24.51,   time: 286
+INFO:root:iteration: 1100,   train accuracy: 18.81,   test accuracy: 19.59,   loss: 2.26151,   DP costs: 0.698,   average batch-size: 981,   best alpha: 23.47,   time: 314
+INFO:root:iteration: 1200,   train accuracy: 18.92,   test accuracy: 19.55,   loss: 2.24633,   DP costs: 0.731,   average batch-size: 1011,   best alpha: 22.65,   time: 342
+INFO:root:iteration: 1300,   train accuracy: 18.86,   test accuracy: 19.53,   loss: 2.23807,   DP costs: 0.763,   average batch-size: 1019,   best alpha: 21.86,   time: 371
+INFO:root:iteration: 1400,   train accuracy: 18.94,   test accuracy: 19.57,   loss: 2.2348,   DP costs: 0.793,   average batch-size: 988,   best alpha: 21.18,   time: 399
+INFO:root:iteration: 1500,   train accuracy: 19.02,   test accuracy: 19.56,   loss: 2.2475,   DP costs: 0.823,   average batch-size: 980,   best alpha: 20.53,   time: 427
+INFO:root:iteration: 1600,   train accuracy: 18.99,   test accuracy: 19.55,   loss: 2.24746,   DP costs: 0.852,   average batch-size: 1060,   best alpha: 19.97,   time: 456
+INFO:root:iteration: 1700,   train accuracy: 18.83,   test accuracy: 19.56,   loss: 2.21463,   DP costs: 0.88,   average batch-size: 1006,   best alpha: 19.43,   time: 485
+INFO:root:iteration: 1800,   train accuracy: 18.84,   test accuracy: 19.57,   loss: 2.2678,   DP costs: 0.907,   average batch-size: 1001,   best alpha: 18.98,   time: 512
+INFO:root:iteration: 1900,   train accuracy: 19.11,   test accuracy: 19.54,   loss: 2.25757,   DP costs: 0.933,   average batch-size: 1007,   best alpha: 18.54,   time: 541
+INFO:root:iteration: 2000,   train accuracy: 18.93,   test accuracy: 19.31,   loss: 2.25602,   DP costs: 0.959,   average batch-size: 1037,   best alpha: 18.11,   time: 570
+INFO:root:iteration: 2100,   train accuracy: 19.04,   test accuracy: 19.46,   loss: 2.23128,   DP costs: 0.985,   average batch-size: 1076,   best alpha: 17.76,   time: 600
+INFO:root:iteration: 2145,   train accuracy: 19.1,   test accuracy: 19.58,   loss: 2.24107,   DP costs: 0.996,   average batch-size: 1106,   best alpha: 17.63,   time: 617
+INFO:root:Terminate: The maximum of iterations is reached!

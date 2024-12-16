@@ -1,15 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=inference     # Job name
-#SBATCH --output=inference.out     # Output file
-#SBATCH --error=inference.err      # Error file
-#SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
-#SBATCH --cpus-per-task=8              # Number of CPU cores per task
-#SBATCH --gres=gpu:1                   # Request 1 GPU
-#SBATCH --mem=1G                      # Memory allocation
-#SBATCH --time=2:00:00                # Maximum runtime (12 hours)
+# # SBATCH --job-name=inference     # Job name
+# # SBATCH --output=inference.out     # Output file
+# # SBATCH --error=inference.err      # Error file
+# # SBATCH --ntasks=1                     # Number of tasks (one task for one GPU job)
+# # SBATCH --cpus-per-task=8              # Number of CPU cores per task
+# # SBATCH --gres=gpu:1                   # Request 1 GPU
+# # SBATCH --mem=1G                      # Memory allocation
+# # SBATCH --time=2:00:00                # Maximum runtime (12 hours)
 
-export base_folder="../cifar_results/standard/CIFAR10/epochs_30_batch_1024_lr_0.7_max_grad_norm_0.4_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
-export dname="CIFAR10"
+export base_folder="../svhn_results/standard/SVHN/epochs_30_batch_1024_lr_0.2_max_grad_norm_0.9_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
+export dname="SVHN"
 export individualize=None
 export num_shadow_models=1
 export target_model_name="run0"

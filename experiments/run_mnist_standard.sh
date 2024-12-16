@@ -51,5 +51,6 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --mia_count 0 \
     --mia_ndata $mia_ndata \
     --noise_multiplier $noise_multiplier \
-    --max_physical_batch_size 512
+    --max_physical_batch_size 512 \
+    --ratios $ratios
 

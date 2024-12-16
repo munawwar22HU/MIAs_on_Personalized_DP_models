@@ -8,8 +8,8 @@
 #SBATCH --mem=1G                      # Memory allocation
 #SBATCH --time=2:00:00                # Maximum runtime (12 hours)
 
-export base_folder="../mnist_results/standard/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
-export dname="MNIST"
+export base_folder="../svhn_results/standard/SVHN/epochs_30_batch_1024_lr_0.2_max_grad_norm_0.9_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
+export dname="SVHN"
 export seed=0
 
 nvidia-smi
