@@ -1,13 +1,13 @@
-Thu Dec 12 11:46:13 2024       
+Thu Dec 19 11:04:12 2024       
 +-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+| NVIDIA-SMI 555.42.02              Driver Version: 555.42.02      CUDA Version: 12.5     |
 |-----------------------------------------+------------------------+----------------------+
 | GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA H200                    Off |   00000000:18:00.0 Off |                    0 |
-| N/A   24C    P0             77W /  700W |       1MiB / 143771MiB |      0%      Default |
+|   0  NVIDIA H100 80GB HBM3          Off |   00000000:19:00.0 Off |                    0 |
+| N/A   28C    P0             75W /  700W |       1MiB /  81559MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -18,34 +18,13 @@ Thu Dec 12 11:46:13 2024
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
-non_target_logits shape:  (1, 10000, 10)
-target_logits shape:  (1, 60000, 10)
-pp_budgets shape:  (60000,)
 assignment shape:  (60000,)
 len of train_set:  60000
 len of test_set:  10000
-train_labels shape:  (60000,)
-test_labels shape:  (10000,)
-train_labels shape:  (60000,)
-test_labels shape:  (10000,)
-pp_budgets shape:  (60000,)
-tr_target_logits shape:  (1, 60000, 10)
-tr_train_labels shape:  (60000,)
-train_target_class_logits shape:  (1, 60000, 1) [[[14.635253 ]
-  [13.692227 ]
-  [10.813507 ]
-  ...
-  [14.7857485]
-  [13.662742 ]
-  [12.684338 ]]]
-test_target_class_logits shape:  (1, 10000, 1) [[[16.183256]
-  [12.738384]
-  [14.675687]
-  ...
-  [14.16465 ]
-  [13.850244]
-  [14.018266]]]
 group_1_logits shape:  (20000, 1)
 group_2_logits shape:  (20000, 1)
 group_3_logits shape:  (20000, 1)
-ROC curve saved at ../mnist_results/standard/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0/roc_curve_per_privacy_group.pdf
+Poop
+0.49293109500000004 0.48690594499999995 0.498999585
+ROC curve saved at ../mnist_extra_results/standard/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_10.0_100.0_ratios_0.54_0.37_0.09_seeds_0/roc_curve_per_privacy_group.pdf
+Hello World

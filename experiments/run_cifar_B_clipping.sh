@@ -34,7 +34,7 @@ export mia_ndata=50000
 # Mode
 export mode="mia"
 # Save Directory
-export save_dir="../cifar_results/"
+export save_dir="../cifar1_results/"
 
 # Run the script
 python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
@@ -51,5 +51,6 @@ python ../idp_sgd/dpsgd_algos/individual_dp_sgd.py \
     --mode $mode \
     --mia_count 0 \
     --mia_ndata $mia_ndata \
-    --noise_multiplier $noise_multiplier
+    --noise_multiplier $noise_multiplier \
+    --max_physical_batch_size 1024
 

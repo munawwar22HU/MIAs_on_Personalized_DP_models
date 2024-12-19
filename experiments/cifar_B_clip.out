@@ -3,4 +3,10 @@ Files already downloaded and verified
 len of train_set:  50000
 len of test_set:  10000
 Files already downloaded and verified
-save path accuracy:  ../cifar_results/clipping/CIFAR10/epochs_60_batch_1024_lr_0.1_max_grad_norm_1.8_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0/accuracy.log
+idx:  [11841 19602 45519 ... 42613 43567  2732] 50000
+len  50000
+len of train_set:  50000
+len of train_set.targets:  50000
+len of pp_budgets:  50000
+length (50000,)
+save path accuracy:  ../cifar1_results/clipping/CIFAR10/epochs_60_batch_1024_lr_0.1_max_grad_norm_1.8_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0/accuracy.log

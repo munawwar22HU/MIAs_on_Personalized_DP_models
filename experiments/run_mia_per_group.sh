@@ -8,15 +8,17 @@
 #SBATCH --mem=1G                      # Memory allocation
 #SBATCH --time=2:00:00                # Maximum runtime (12 hours)
 
-export base_folder="../svhn_results/standard/SVHN/epochs_30_batch_1024_lr_0.2_max_grad_norm_0.9_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
-export dname="SVHN"
+export base_folder="../mnist_extra_results/standard/MNIST/epochs_80_batch_512_lr_0.6_max_grad_norm_0.2_budgets_1.0_10.0_100.0_ratios_0.54_0.37_0.09_seeds_0"
+export dname="MNIST"
 export seed=0
+export num_points=10000
 
 nvidia-smi
 python ../mia/mia_per_group.py \
     --basefolder $base_folder \
     --dname $dname\
     --seed $seed \
+    --num_points $num_points
 
 export base_folder1="../cifar_results/clipping/CIFAR10/epochs_60_batch_1024_lr_0.1_max_grad_norm_1.8_budgets_1.0_2.0_3.0_ratios_0.54_0.37_0.09_seeds_0"
 export base_folder2="../cifar_results/clipping/CIFAR10/epochs_70_batch_1024_lr_0.2_max_grad_norm_1.1_budgets_1.0_2.0_3.0_ratios_0.34_0.43_0.23_seeds_0"
